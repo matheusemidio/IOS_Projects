@@ -13,7 +13,6 @@
 		5D465FA526EA85550036ACE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D465FA326EA85550036ACE3 /* Main.storyboard */; };
 		5D465FA726EA85560036ACE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D465FA626EA85560036ACE3 /* Assets.xcassets */; };
 		5D465FAA26EA85560036ACE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D465FA826EA85560036ACE3 /* LaunchScreen.storyboard */; };
-		5D465FB426EA9D570036ACE3 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D465FB326EA9D570036ACE3 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		5D465FA626EA85560036ACE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D465FA926EA85560036ACE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D465FAB26EA85560036ACE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D465FB326EA9D570036ACE3 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = "../../../../Downloads/Dogs Age/Swift/Toast.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 		5D465F9C26EA85550036ACE3 /* DogsAge_1931358 */ = {
 			isa = PBXGroup;
 			children = (
-				5D465FB326EA9D570036ACE3 /* Toast.swift */,
 				5D465F9D26EA85550036ACE3 /* AppDelegate.swift */,
 				5D465F9F26EA85550036ACE3 /* SceneDelegate.swift */,
 				5D465FA126EA85550036ACE3 /* ViewController.swift */,
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D465FA226EA85550036ACE3 /* ViewController.swift in Sources */,
-				5D465FB426EA9D570036ACE3 /* Toast.swift in Sources */,
 				5D465F9E26EA85550036ACE3 /* AppDelegate.swift in Sources */,
 				5D465FA026EA85550036ACE3 /* SceneDelegate.swift in Sources */,
 			);

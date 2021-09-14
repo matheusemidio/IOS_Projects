@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        txtResult.text = ""
     }
 
     
@@ -20,48 +21,50 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtResult: UILabel!
     
     @IBAction func btnCalculate(_ sender: Any) {
-        let humanAge = 0
-        if txtAgeInput.text != nil {
-            humanAge = Int(txtAgeInput.text!);
-        }
-        
-        var dogAge = 0;
-        
-        switch humanAge{
-        case 0...15:
-            dogAge = 1
-        case 16...24:
-            dogAge = 2
-        case 25...28:
-            dogAge = 3
-        case 29...32:
-            dogAge = 4
-        case 33...36:
-            dogAge = 5
-        case 37...40:
-            dogAge = 7
-        case 41...48:
-            dogAge = 8
-        case 49...52:
-            dogAge = 9
-        case 53...56:
-            dogAge = 10
-        case 57...60:
-            dogAge = 11
-        case 61...64:
-            dogAge = 12
-        case 65...68:
-            dogAge = 13
-        case 69...72:
-            dogAge = 14
-        case 73...76:
-            dogAge = 15
-        case 77...:
-            dogAge = 16
+        var humanAge = 0
+        let dogAge = Int(txtAgeInput.text!)!
+        switch dogAge
+        {
+        case 1:
+            humanAge = 15
+        case 2:
+            humanAge = 24
+        case 3:
+            humanAge = 28
+        case 4:
+            humanAge = 32
+        case 5:
+            humanAge = 36
+        case 6:
+            humanAge = 40
+        case 7:
+            humanAge = 44
+        case 8:
+            humanAge = 48
+        case 9:
+            humanAge = 52
+        case 10:
+            humanAge = 56
+        case 11:
+            humanAge = 60
+        case 12:
+            humanAge = 64
+        case 13:
+            humanAge = 68
+        case 14:
+            humanAge = 72
+        case 15:
+            humanAge = 76
+        case 16:
+            humanAge = 80
         default:
-            dogAge = 0
+            humanAge = 0
             
         }
+        
+        txtResult.text = "If your \(dogAge) years old dog were a human, he/she would have \(humanAge) years old"
+        txtResult.isHidden = false
+        txtAgeInput.text = ""
     }
     
 }
