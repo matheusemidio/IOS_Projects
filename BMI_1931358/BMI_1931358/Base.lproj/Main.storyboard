@@ -52,7 +52,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
-                                    <action selector="txtHeightClicked:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="MLd-R2-vdL"/>
+                                    <action selector="txtHeightClicked:" destination="BYZ-38-t0r" eventType="editingChanged" id="5MY-uG-1PF"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kV7-0b-eFa">
@@ -75,7 +75,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
-                                    <action selector="txtWeightClicked:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="014-23-b5o"/>
+                                    <action selector="txtWeightClicked:" destination="BYZ-38-t0r" eventType="editingChanged" id="Bit-nI-XJK"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lk3-Cy-Hf8">
@@ -83,6 +83,7 @@
                                 <color key="backgroundColor" red="0.022665561800352653" green="0.46816976127320953" blue="0.2490448189411946" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="APP-YC-UwZ"/>
+                                    <constraint firstAttribute="width" constant="374" id="Ihh-Mp-FQZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="OS5-aq-BXl"/>
                                 </constraints>
                                 <state key="normal" title="Calculate">
@@ -156,6 +157,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnCalculate" destination="Lk3-Cy-Hf8" id="oUs-gk-9Wj"/>
                         <outlet property="lblDisplay" destination="rau-RY-h9n" id="rf6-dD-k6d"/>
                         <outlet property="txtHeight" destination="Zes-Gb-oxh" id="yR2-pg-4dg"/>
                         <outlet property="txtWeight" destination="JQh-oh-h5x" id="N2T-vg-d9C"/>
