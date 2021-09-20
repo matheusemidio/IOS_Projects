@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         
     }
 
+    @IBOutlet weak var theme: UISegmentedControl!
+    
     @IBOutlet weak var txtHeight: UITextField!
     
     @IBOutlet weak var txtWeight: UITextField!
@@ -24,7 +26,34 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btnCalculate: UIButton!
     
+    @IBOutlet var background: UIView!
     
+    @IBOutlet weak var lblHeight: UILabel!
+    
+    @IBOutlet weak var lblWeight: UILabel!
+    
+    @IBAction func changeTheme(_ sender: Any) {
+        if theme.titleForSegment(at: theme.selectedSegmentIndex) == "White"
+        {
+            background.backgroundColor = UIColor.white
+            lblHeight.textColor = UIColor.black
+            lblWeight.textColor = UIColor.black
+            txtHeight.backgroundColor = UIColor.white
+            txtWeight.backgroundColor = UIColor.white        }
+        if theme.titleForSegment(at: theme.selectedSegmentIndex) == "Dark"
+        {
+            background.backgroundColor = UIColor.black
+            lblHeight.textColor = UIColor.white
+            lblWeight.textColor = UIColor.white
+            txtHeight.backgroundColor = UIColor.white
+            txtWeight.backgroundColor = UIColor.white
+            theme.tintColor = UIColor.red
+            
+            
+            
+        }
+        
+    }
     
     func calculateBMI(height : Double, weight : Double) -> String {
         let heightMeters : Double = height/100
@@ -64,42 +93,23 @@ class ViewController: UIViewController {
     @IBAction func btnCalculateBMI(_ sender: Any) {
         
         //Validating height
-        if let heightCentimetersInput : Double = Double(txtHeight.text!)
+        guard let heightCentimetersInput : Double = Double(txtHeight.text!), heightCentimetersInput >= 80 && heightCentimetersInput <= 250 else
         {
-            if heightCentimetersInput >= 80 && heightCentimetersInput <= 250
-            {
-                //Validating weight
-                if let weightKilosInput : Double = Double(txtWeight.text!)
-                {
-                    if weightKilosInput >= 30 && weightKilosInput <= 300
-                    {
-                        let bmiResult = calculateBMI(height : heightCentimetersInput, weight : weightKilosInput)
-                        modifyLabelColor(bmi: bmiResult)
-                        lblDisplay.text = "BMI Classification: \(bmiResult)"
-                        lblDisplay.isHidden = false
-                    }
-                    else
-                    {
-                        Toast.ok(view: self, title: "Error", message: "", handler: nil)                }
-                }
-                else
-                {
-                    
-                    Toast.ok(view: self, title: "Review the weight", message: "Enter a weight between 30kg and 300kg.", handler: nil)
-                    
-                }
-                
-            }
-            else
-            {
-                Toast.ok(view: self, title: "Review the height", message: "Enter a height between 80cm and 250cm.", handler: nil)            }
             
+            Toast.ok(view: self, title: "Review the height", message: "Enter a height between 80cm and 250cm.", handler: nil)
+            return
+        }
+        
+        guard let weightKilosInput : Double = Double(txtWeight.text!), weightKilosInput >= 30 && weightKilosInput <= 300 else
+        {
+            Toast.ok(view: self, title: "Review the weight", message: "Enter a weight between 30kg and 300kg.", handler: nil)
+            return
             
         }
-        else
-        {
-            Toast.ok(view: self, title: "Error", message: "Wrong height input. Please, type a correct height", handler: nil)
-        }
+        let bmiResult = calculateBMI(height : heightCentimetersInput, weight : weightKilosInput)
+        modifyLabelColor(bmi: bmiResult)
+        lblDisplay.text = "BMI Classification: \(bmiResult)"
+        lblDisplay.isHidden = false
         
     }
     
