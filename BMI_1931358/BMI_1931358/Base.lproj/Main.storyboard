@@ -105,6 +105,7 @@
                             </label>
                             <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pax-Wy-xVv">
                                 <rect key="frame" x="141.5" y="44" width="131" height="31"/>
+                                <color key="backgroundColor" red="0.58798581360000002" green="0.59597605470000004" blue="0.60391181709999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="5rk-Fy-eKf"/>
                                     <constraint firstAttribute="height" constant="30" id="y1i-yk-a34"/>

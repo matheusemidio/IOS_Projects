@@ -13,6 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         btnCalculate.layer.cornerRadius = 15
+        theme.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: UIControl.State.selected)
+        theme.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], for: UIControl.State.normal)
         
     }
 
@@ -32,6 +34,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lblWeight: UILabel!
     
+    
+    
     @IBAction func changeTheme(_ sender: Any) {
         if theme.titleForSegment(at: theme.selectedSegmentIndex) == "White"
         {
@@ -42,16 +46,15 @@ class ViewController: UIViewController {
             txtWeight.backgroundColor = UIColor.white        }
         if theme.titleForSegment(at: theme.selectedSegmentIndex) == "Dark"
         {
+            
             background.backgroundColor = UIColor.black
             lblHeight.textColor = UIColor.white
             lblWeight.textColor = UIColor.white
             txtHeight.backgroundColor = UIColor.white
             txtWeight.backgroundColor = UIColor.white
             theme.tintColor = UIColor.red
-            
-            
-            
-        }
+                  }
+        
         
     }
     
